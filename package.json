@@ -22,14 +22,15 @@
     "ttf"
   ],
   "author": "Martin Brychta <martin@brychta.name> (https://www.brychta.name/)",
-  "licenses": [
-    {
-      "type": "GPL-3.0",
-      "url": "https://github.com/SirPole/gulp-google-fonts/blob/master/LICENSE"
-    }
-  ],
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/SirPole/gulp-google-fonts/issues"
   },
-  "homepage": "https://github.com/SirPole/gulp-google-fonts#readme"
+  "homepage": "https://github.com/SirPole/gulp-google-fonts#readme",
+  "dependencies": {
+    "neon-js": "^1.1.1",
+    "through2": "^2.0.1",
+    "gulp-util": "^3.0.6",
+    "request": "^2.75.0"
+  }
 }
