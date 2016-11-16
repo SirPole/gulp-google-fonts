@@ -1,6 +1,6 @@
 {
   "name": "gulp-google-fonts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Downloads desired fonts from, encodes them to base64 and saves in format specific css files.",
   "main": "index.js",
   "scripts": {
