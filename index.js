@@ -99,10 +99,11 @@ function requestFontFile (font) {
     var ext = '"data:application/x-font-' + font.match(/url\(.*\.(.{3,5})\)/)[ 1 ] + ';base64,';
     font    = font.replace(/url\((.+?)\)/gi, '\$1');
     request({
-      url : font
+      url : font,
+      encoding : null
     }, (error, response, body) => {
       if (!error && response.statusCode === 200) {
-        var encoded = ext + new Buffer(body).toString('base64') + '"';
+        var encoded = ext + body.toString('base64') + '"';
         resolve({
           font : font,
           encoded : encoded
@@ -115,7 +116,7 @@ function requestFontFile (font) {
 }
 
 function pushToFile (data) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     var ext = data[ 0 ].match(/x-font-(.{3,5});/)[ 1 ];
     var out = '';
     data.forEach(item => {
